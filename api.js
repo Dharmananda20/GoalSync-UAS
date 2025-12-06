@@ -13,7 +13,7 @@ api.put("/goals/:id", authenticateTokenMiddleware,goalController.updateGoal);
 api.delete("/goals/:id",authenticateTokenMiddleware,goalController.deleteGoal);
 api.get("/goals/:id", authenticateTokenMiddleware,goalController.getProfile);
 api.post("/goals/:id/members",authenticateTokenMiddleware,memberController.AddMember);
-api.post("/goals/:id/progress",authenticateTokenMiddleware,progressController.AddMember);
+api.post("/goals/:id/progress",authenticateTokenMiddleware,progressController.UpdateProgress);
 api.post("/signin", userController.signIn);
 api.post("/signup", userController.signUp);
 
