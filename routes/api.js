@@ -7,13 +7,13 @@ import * as userController from "../controllers/userController.js"
 // import { authenticateTokenMiddleware } from "../Middleware/authMiddleware.js"
 
 const api = express.Router();
-api.get("/goals", authenticateTokenMiddleware, goalController.listGoals);
-api.post("/goals", authenticateTokenMiddleware ,goalController.addGoal);
-api.put("/goals/:id", authenticateTokenMiddleware,goalController.updateGoal);
-api.delete("/goals/:id",authenticateTokenMiddleware,goalController.deleteGoal);
-api.get("/goals/:id", authenticateTokenMiddleware,goalController.getProfile);
-api.post("/goals/:id/members",authenticateTokenMiddleware,memberController.AddMember);
-api.post("/goals/:id/progress",authenticateTokenMiddleware,progressController.UpdateProgress);
+api.get("/goals", goalController.listGoals);
+api.post("/goals",  goalController.addGoal);
+api.put("/goals/:id", goalController.updateGoal);
+api.delete("/goals/:id",goalController.deleteGoal);
+//api.get("/goals/:id", goalController.getProfile);
+//api.post("/goals/:id/members",memberController.AddMember);
+//api.post("/goals/:id/progress",progressController.UpdateProgress);
 api.post("/signin", userController.signIn);
 api.post("/signup", userController.signUp);
 

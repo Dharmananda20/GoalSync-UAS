@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const memberSchema = new mongoose.schema({
+const memberSchema = new mongoose.Schema({
     userId: mongoose.Schema.Types.ObjectId,
     name: String,
     role : {
@@ -8,8 +8,8 @@ const memberSchema = new mongoose.schema({
         default: "member"
     }
 });
-const actionSchema = new mongoose.schema({
-    userId: mongoose.schema.Types.ObjectId,
+const actionSchema = new mongoose.Schema({
+    userId: mongoose.Schema.Types.ObjectId,
     delta:Number,
     note: String,
     createdAt : {
@@ -17,7 +17,7 @@ const actionSchema = new mongoose.schema({
         default: Date.now
     }
 });
-const goalSchema = new mongoose.schema({
+const goalSchema = new mongoose.Schema({
     title: {
         type:String,
         required: true
