@@ -1,5 +1,5 @@
 import express from "express";
-import api from "./routes.api.js"
+import api from "./routes/api.js"
 import database from "./config/database.js"
 import cors from "cors";
 

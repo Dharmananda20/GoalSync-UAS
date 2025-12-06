@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const memberSchema = new mongoose.schema({
-    userId: mongoose.schema.Types.ObjectId,
+    userId: mongoose.Schema.Types.ObjectId,
     name: String,
     role : {
         type: String,
